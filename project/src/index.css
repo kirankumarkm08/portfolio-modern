@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: 255 255 255;
+    --text: 0 0 0;
+    --text-secondary: 115 115 115;
+    --accent: 100 100 100;
+    --border: 230 230 230;
+  }
+
+  .dark {
+    --bg: 0 0 0;
+    --text: 255 255 255;
+    --text-secondary: 140 140 140;
+    --accent: 200 200 200;
+    --border: 40 40 40;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
